@@ -1,3 +1,7 @@
+Files that are excluded but needed to run:
+- craft/config/db.php
+
+
 Welcome to Craft CMS!
 
 Here are some online resources you might find useful:
