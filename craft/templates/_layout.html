@@ -14,7 +14,9 @@
 <head>
 	<meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="home" href="{{ siteUrl }}" />
@@ -28,11 +30,7 @@
     <nav class="nav">
       <ul>
         <li><a href="{{ siteUrl }}">Home</a></li>
-        <li><a href="{{ url('work') }}" {% if craft.request.firstSegment == 'work' %}class="active"{% endif %}>Work</a></li>
-        <li><a href="{{ url('blog') }}" {% if craft.request.firstSegment == 'blog' %}class="active"{% endif %}>Blog</a></li>
-        <li><a href="{{ url('about') }}" {% if craft.request.firstSegment == 'about' %}class="active"{% endif %}>About</a></li>
-        <li><a href="{{ url('resume') }}" {% if craft.request.firstSegment == 'resume' %}class="active"{% endif %}>Resume</a></li>
-        <li><a href="{{ url('contact') }}" {% if craft.request.firstSegment == 'contact' %}class="active"{% endif %}>Contact</a></li>
+        <li><a href="{{ url('commerce') }}" {% if craft.request.firstSegment == 'commerce' %}class="active"{% endif %}>Commerce</a></li>
       </ul>
     </nav>
   </header>
