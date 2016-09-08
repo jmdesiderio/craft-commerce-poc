@@ -1,2 +1,4 @@
-db.php
 .DS_Store
+node_modules
+
+db.php

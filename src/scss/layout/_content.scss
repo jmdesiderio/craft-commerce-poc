@@ -1,0 +1,19 @@
+.content {
+  margin: $big-header-height 0;
+  min-height: calc(100% - #{$big-header-height});
+  padding: $big-wrap-margin 0;
+
+  h1 {
+    font-size: 35px;
+    margin: 0;
+  }
+
+  a {
+    color: $red;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

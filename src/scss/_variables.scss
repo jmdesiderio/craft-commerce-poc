@@ -1,0 +1,48 @@
+// Colors
+$black: #000;
+$white: #fff;
+
+$red: #da5a47;
+
+$transparent: rgba($white, 0);
+
+
+// Text
+$background-color: $white;
+$base-font-family: sans-serif;
+$base-font-size: 16px;
+$base-font-weight: 300;
+$base-line-height: 1.4;
+$base-text-color: $black;
+
+$headings-font-family: $base-font-family;
+
+
+// Breakpoints
+$huge-device-width: 1400px; // 87.5rem
+$big-device-width: 1024px; // 64rem
+$medium-device-width-max: ($big-device-width - 1px);
+$medium-device-width: 768px; // 48rem
+$tiny-device-width-max: ($medium-device-width - 1px);
+$tiny-device-width: 320px; // 20rem
+
+$mobile-only: 'only screen and (max-width: ${tiny-device-width-max})';
+$tablet-up: 'only screen and (min-width: ${medium-device-width})';
+$tablet-only: 'only screen and (min-width: ${medium-device-width}) and (max-width: ${medium-device-width-max})';
+$tablet-down: 'only screen and (max-width: #{$medium-device-width-max})';
+$desktop-up: 'only screen and (min-width: #{$big-device-width})';
+
+$small-wrap-margin: 12px;
+$big-wrap-margin: ($small-wrap-margin * 2);
+
+
+// Animations
+$default-transition-duration: .45s;
+$default-transition-timing: ease-in-out;
+$default-transition: $default-transition-duration $default-transition-timing;
+
+
+// Header
+$small-header-height: 2.5rem; // 40px
+$medium-header-height: 3.75rem; // 60px
+$big-header-height: 5rem; // 80px

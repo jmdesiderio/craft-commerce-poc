@@ -1,0 +1,68 @@
+html,
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+* {
+  &,
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  background-color: $background-color;
+  color: $base-text-color;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
+  line-height: $base-line-height;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  .touch & {
+    -webkit-tap-highlight-color: $transparent;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: $headings-font-family;
+  font-weight: 700;
+  line-height: $base-line-height;
+  margin: 2rem 0 .5rem;
+  text-transform: capitalize;
+}
+
+img,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+svg {
+  pointer-events: none;
+}
+
+small {
+  font-size: .75em;
+}
+
+// Fix for IE10 "metro" panel
+@-ms-viewport {
+  width: device-width;
+}
