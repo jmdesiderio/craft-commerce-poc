@@ -4,7 +4,7 @@ const autoprefixer = require('autoprefixer');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const __PRODUCTION__ = process.env.NODE_ENV === 'production';
-const DIST_DIR = path.resolve('public_html/assets');
+const DIST_DIR = path.resolve('public/assets');
 const SRC_DIR = path.resolve('src');
 
 // instantiate css extraction
