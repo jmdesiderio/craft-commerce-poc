@@ -1,0 +1,6 @@
+<div style="background: url({{ block.backgroundImage.first.getUrl('background') }})">
+  <h2>{{ block.heading }}</h2>
+  <div style="text-align: {{ block.textPosition }};{% if block.enableTextBackground %}background: white{% endif %}">
+    {{ block.body }}
+  </div>
+</div>

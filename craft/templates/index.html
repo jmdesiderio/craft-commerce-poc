@@ -1,33 +1,36 @@
-{#
- # Homepage template
- # ---------------
- #
- # When this template gets loaded, it will be because someone has accessed
- # http://yoursite.com/ (without any URI). Craft checks to see if you have
- # a Single section set to be the Homepage (as you do, by default), and
- # loads the section’s Template (this file). A special ‘entry’ variable
- # will already be set for you, assigned to the Homepage entry.
- #
- # It's worth noting that even if you didn't have a Homepage Single section,
- # as long as this template remains at craft/templates/index.html, it
- # would still be the one to get loaded when accessing http://yoursite.com/,
- # albeit without an ‘entry’ variable already set for you.
- #
- # See this page for more details on how Craft routes requests:
- # http://craftcms.com/docs/routing
- #}
-
 {% extends "_layout" %}
 
 {% block content %}
-	<h1>{{ entry.title }}</h1>
+  {% for block in entry.pageContent %}
 
-	{{ entry.body }}
+    {# set vars to pass to includes #}
+    {% set vars = { 'block': block } %}
 
-	<h2>Recent News</h2>
-	<ul>
-		{% for entry in craft.entries.section('news').limit(5).find() %}
-			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-		{% endfor %}
-	</ul>
+    {% if block.type == 'hero' %}
+
+      {% include 'page-content/hero.html' with vars only %}
+
+    {% elseif block.type == 'banner' %}
+
+      {% include 'page-content/banner.html' with vars only %}
+
+    {% elseif block.type == 'productsCarousel' %}
+
+      {% include 'page-content/products-carousel.html' with vars only %}
+
+    {% elseif block.type == 'productsFeatured' %}
+
+      {% include 'page-content/products-featured.html' with vars only %}
+
+    {% elseif block.type == 'marketingBox' %}
+
+      {% include 'page-content/marketing-box.html' with vars only %}
+
+    {% elseif block.type == 'info' %}
+
+      {% include 'page-content/info.html' with vars only %}
+
+    {% endif %}
+
+  {% endfor %}
 {% endblock %}

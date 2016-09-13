@@ -1,0 +1,12 @@
+<div>
+  <h2>{{ block.heading }}</h2>
+  <ul>
+    {% for product in block.products %}
+      <li>
+        <img src="{{ product.productImages.first.url }}" style="height: 100px; width: auto;"/>
+        <p>{{ product.title }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+  <a href="{{ block.linkPage.first.url }}">{{ block.linkText}}</a>
+</div>
