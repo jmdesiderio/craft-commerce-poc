@@ -1,0 +1,24 @@
+.nav-main {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+
+  .nav-main-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-main-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .nav-main-link {
+    &:hover {
+      border-bottom: .125rem solid $white;
+    }
+  }
+}

@@ -421,11 +421,11 @@ small {
   width: device-width; }
 
 .content {
-  margin: 5rem 0;
-  min-height: calc(100% - 5rem);
+  margin: 10rem 0;
+  min-height: calc(100% - 10rem);
   padding: 24px 0; }
   .content h1 {
-    font-size: 35px;
+    font-size: 2rem;
     margin: 0; }
   .content a {
     color: #da5a47;
@@ -443,55 +443,65 @@ small {
     color: #fff; }
 
 .header {
-  -ms-flex-align: center;
-      align-items: center;
   background: #da5a47;
   color: #fff;
-  display: -ms-flexbox;
-  display: flex;
-  height: 5rem;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  height: 10rem;
   left: 0;
-  padding: 0 12px;
   position: fixed;
+  text-align: center;
   top: 0;
   width: 100%;
   z-index: 1; }
-  @media only screen and (min-width: 1024px) {
-    .header {
-      padding: 0 24px; } }
-  .header a {
-    color: #fff;
-    text-decoration: none; }
-  .header h1 {
+  .header .header-language-switcher,
+  .header .header-logo,
+  .header .header-user-nav {
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .header .header-logo {
     font-size: 1.875rem;
     font-weight: normal;
     line-height: 1;
     margin: 0; }
+  .header .header-logo-link {
+    color: #fff;
+    text-decoration: none; }
 
-.nav ul {
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
-.nav li {
-  margin-left: 20px; }
-
-.nav a:hover, .nav a.active {
-  border-bottom: 2px solid #fff; }
+.nav-main {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0; }
+  .nav-main .nav-main-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .nav-main .nav-main-item {
+    padding: 1rem 1.25rem; }
+  .nav-main .nav-main-link:hover {
+    border-bottom: 0.125rem solid #fff; }
 
 .wrap {
   margin: 0 auto;
   max-width: 1400px;
-  min-height: 100%;
   min-width: 320px;
   padding: 0 12px;
   position: relative; }
   @media only screen and (min-width: 1024px) {
     .wrap {
       padding: 0 24px; } }
+
+.promo-bar {
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
 
 /*# sourceMappingURL=style.min.css.map*/

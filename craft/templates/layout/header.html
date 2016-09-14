@@ -1,12 +1,22 @@
 <header class="header">
   {% include promoBar.enable ? 'modules/promo-bar.html' ignore missing %}
 
-  <h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
-
-  <nav class="nav">
-    <ul>
-      <li><a href="{{ siteUrl }}">Home</a></li>
-      <li><a href="{{ url('commerce') }}" {% if craft.request.firstSegment == 'commerce' %}class="active"{% endif %}>Commerce</a></li>
+  <div class="wrap">
+    <ul class="header-language-switcher">
+      <li>English</li>
+      <li>Spanish</li>
     </ul>
-  </nav>
+
+    <div class="header-logo">
+      <a class="header-logo-link" href="{{ siteUrl }}">{{ siteName }}</a></h1>
+    </div>
+
+    <ul class="header-user-nav">
+      <li>Search</li>
+      <li>User</li>
+      <li>Cart</li>
+    </ul>
+  </div>
+
+  {% include 'layout/nav-main.html' %}
 </header>

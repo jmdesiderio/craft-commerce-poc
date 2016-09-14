@@ -1,30 +1,32 @@
 .header {
-  align-items: center;
   background: $red;
   color: $white;
-  display: flex;
   height: $big-header-height;
-  justify-content: space-between;
   left: 0;
-  padding: 0 $small-wrap-margin;
   position: fixed;
+  text-align: center;
   top: 0;
   width: 100%;
   z-index: 1;
 
-  @media #{$desktop-up} {
-    padding: 0 $big-wrap-margin;
+  .header-language-switcher,
+  .header-logo,
+  .header-user-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
-  a {
-    color: $white;
-    text-decoration: none;
-  }
-
-  h1 {
+  .header-logo {
     font-size: 1.875rem;
     font-weight: normal;
     line-height: 1;
     margin: 0;
+  }
+
+  .header-logo-link {
+    color: $white;
+    text-decoration: none;
   }
 }
