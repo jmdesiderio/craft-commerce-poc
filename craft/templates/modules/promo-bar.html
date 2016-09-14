@@ -1,0 +1,13 @@
+{% if promoBar.linkUrl %}
+
+  <a href="{{ promoBar.linkUrl }}">
+    {{ promoBar.text }}
+  </a>
+
+{% else %}
+
+  <div>
+    {{ promoBar.text }}
+  </div>
+
+{% endif %}

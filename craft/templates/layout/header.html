@@ -1,0 +1,12 @@
+<header class="header">
+  {% include promoBar.enable ? 'modules/promo-bar.html' ignore missing %}
+
+  <h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="{{ siteUrl }}">Home</a></li>
+      <li><a href="{{ url('commerce') }}" {% if craft.request.firstSegment == 'commerce' %}class="active"{% endif %}>Commerce</a></li>
+    </ul>
+  </nav>
+</header>

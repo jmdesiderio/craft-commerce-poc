@@ -13,16 +13,7 @@
 </head>
 
 <body>
-  <header class="header">
-    <h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
-
-    <nav class="nav">
-      <ul>
-        <li><a href="{{ siteUrl }}">Home</a></li>
-        <li><a href="{{ url('commerce') }}" {% if craft.request.firstSegment == 'commerce' %}class="active"{% endif %}>Commerce</a></li>
-      </ul>
-    </nav>
-  </header>
+  {% include 'layout/header.html' %}
 
   <main class="content" role="main">
     <div class="wrap">
@@ -32,11 +23,7 @@
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="wrap">
-      Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved.
-    </div>
-  </footer>
+	{% include 'layout/footer.html' %}
 
   <script src="/assets/app.min.js"></script>
 </body>

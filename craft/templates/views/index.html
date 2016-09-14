@@ -8,27 +8,27 @@
 
     {% if block.type == 'hero' %}
 
-      {% include 'page-content/hero.html' with vars only %}
+      {% include 'modules/hero' with vars only %}
 
     {% elseif block.type == 'banner' %}
 
-      {% include 'page-content/banner.html' with vars only %}
+      {% include 'modules/banner' with vars only %}
 
     {% elseif block.type == 'productsCarousel' %}
 
-      {% include 'page-content/products-carousel.html' with vars only %}
+      {% include 'modules/products-carousel' with vars only %}
 
     {% elseif block.type == 'productsFeatured' %}
 
-      {% include 'page-content/products-featured.html' with vars only %}
+      {% include 'modules/products-featured' with vars only %}
 
     {% elseif block.type == 'marketingBox' %}
 
-      {% include 'page-content/marketing-box.html' with vars only %}
+      {% include 'modules/marketing-box' with vars only %}
 
     {% elseif block.type == 'info' %}
 
-      {% include 'page-content/info.html' with vars only %}
+      {% include 'modules/info' with vars only %}
 
     {% endif %}
 
