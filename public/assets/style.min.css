@@ -409,7 +409,7 @@ h3 {
 p {
   margin: 0; }
 
-li {
+ul {
   list-style: none;
   margin: 0;
   padding: 0; }
@@ -528,6 +528,7 @@ small {
     max-height: 3rem; }
 
 .hero {
+  background: center center/cover no-repeat;
   color: #fff;
   padding: 12rem 0;
   text-align: center; }
@@ -535,6 +536,7 @@ small {
     text-transform: uppercase; }
 
 .marketing-box {
+  background: center center/cover no-repeat;
   color: #fff;
   padding: 12rem 0; }
 
