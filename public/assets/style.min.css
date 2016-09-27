@@ -406,6 +406,14 @@ h3 {
   margin: 2rem 0 .5rem;
   text-transform: capitalize; }
 
+p {
+  margin: 0; }
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
 img,
 svg {
   height: auto;
@@ -422,8 +430,7 @@ small {
 
 .content {
   margin: 10rem 0;
-  min-height: calc(100% - 10rem);
-  padding: 24px 0; }
+  min-height: calc(100% - 10rem); }
   .content h1 {
     font-size: 2rem;
     margin: 0; }
@@ -496,6 +503,76 @@ small {
   @media only screen and (min-width: 1024px) {
     .wrap {
       padding: 0 24px; } }
+
+.banner {
+  border-bottom: 1px solid #000; }
+  .banner .banner-list {
+    display: -ms-flexbox;
+    display: flex; }
+  .banner .banner-item {
+    -ms-flex-align: center;
+        align-items: center;
+    border-right: 1px solid #000;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 1 1 25%;
+        flex: 1 1 25%;
+    -ms-flex-pack: center;
+        justify-content: center;
+    margin: 1rem 0;
+    padding: 0 1rem; }
+    .banner .banner-item:last-child {
+      border: 0; }
+  .banner .banner-image {
+    margin: 0 1rem 0 0;
+    max-height: 3rem; }
+
+.hero {
+  color: #fff;
+  padding: 12rem 0;
+  text-align: center; }
+  .hero .hero-heading {
+    text-transform: uppercase; }
+
+.marketing-box {
+  color: #fff;
+  padding: 12rem 0; }
+
+.products-carousel {
+  text-align: center; }
+  .products-carousel .products-carousel-heading {
+    margin: 3rem 0; }
+  .products-carousel .products-carousel-list {
+    display: -ms-flexbox;
+    display: flex; }
+  .products-carousel .products-carousel-item {
+    -ms-flex: 1 1 20%;
+        flex: 1 1 20%; }
+  .products-carousel .products-carousel-image {
+    height: 22rem;
+    width: auto; }
+  .products-carousel .products-carousel-link {
+    display: inline-block;
+    margin: 3rem; }
+
+.products-featured .products-featured-heading {
+  text-align: center; }
+
+.products-featured .products-featured-list {
+  display: -ms-flexbox;
+  display: flex; }
+
+.products-featured .products-featured-item {
+  -ms-flex-align: center;
+      align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 1 50%;
+      flex: 1 1 50%; }
+
+.products-featured .products-featured-image {
+  height: 22rem;
+  width: auto; }
 
 .promo-bar {
   display: block;

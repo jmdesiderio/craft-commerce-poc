@@ -1,0 +1,25 @@
+.products-carousel {
+  text-align: center;
+
+  .products-carousel-heading {
+    margin: 3rem 0;
+  }
+
+  .products-carousel-list {
+    display: flex;
+  }
+
+  .products-carousel-item {
+    flex: 1 1 20%;
+  }
+
+  .products-carousel-image {
+    height: 22rem;
+    width: auto;
+  }
+
+  .products-carousel-link {
+    display: inline-block;
+    margin: 3rem;
+  }
+}

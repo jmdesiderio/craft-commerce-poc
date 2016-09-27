@@ -16,11 +16,9 @@
   {% include 'layout/header.html' %}
 
   <main class="content" role="main">
-    <div class="wrap">
-      {% block content %}
-        <p>Set <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code></p>
-      {% endblock %}
-    </div>
+    {% block content %}
+      <p>Set <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code></p>
+    {% endblock %}
   </main>
 
 	{% include 'layout/footer.html' %}

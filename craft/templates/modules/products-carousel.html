@@ -1,12 +1,16 @@
-<div>
-  <h2>{{ block.heading }}</h2>
-  <ul>
-    {% for product in block.products %}
-      <li>
-        <img src="{{ product.productImages.first.url }}" style="height: 100px; width: auto;"/>
-        <p>{{ product.title }}</p>
-      </li>
-    {% endfor %}
-  </ul>
-  <a href="{{ block.linkPage.first.url }}">{{ block.linkText}}</a>
+<div class="products-carousel">
+  <div class="wrap">
+    <h2 class="products-carousel-heading">{{ block.heading }}</h2>
+    <ul class="products-carousel-list">
+
+      {% for product in block.products %}
+        <li class="products-carousel-item">
+          <img class="products-carousel-image" src="{{ product.productImages.first.url }}"/>
+          <p class="products-carousel-text">{{ product.title }}</p>
+        </li>
+      {% endfor %}
+
+    </ul>
+    <a class="products-carousel-link" href="{{ block.linkPage.first.url }}">{{ block.linkText}}</a>
+  </div>
 </div>

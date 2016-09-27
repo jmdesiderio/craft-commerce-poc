@@ -1,0 +1,20 @@
+.products-featured {
+  .products-featured-heading {
+    text-align: center;
+  }
+
+  .products-featured-list {
+    display: flex;
+  }
+
+  .products-featured-item {
+    align-items: center;
+    display: flex;
+    flex: 1 1 50%;
+  }
+
+  .products-featured-image {
+    height: 22rem;
+    width: auto;
+  }
+}

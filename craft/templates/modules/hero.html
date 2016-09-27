@@ -1,6 +1,11 @@
-<div style="background: url({{ block.backgroundImage.first.getUrl('background') }})">
-  <h1>{{ block.heading }}</h1>
-  <div>{{ block.body }}</div>
-  <button>{{ block.buttonText }}</button>
-  {{ block.buttonLink.first.url }}
+<div class="hero" style="background: url({{ block.backgroundImage.first.getUrl('background') }})">
+  <div class="wrap">
+    <h1 class="hero-heading">{{ block.heading }}</h1>
+    <div class="hero-text">{{ block.body }}</div>
+
+    {% if block.buttonLink.first.url %}
+      <a class="hero-button" href="{{ block.buttonLink.first.url }}">{{ block.buttonText }}</a>
+    {% endif %}
+
+  </div>
 </div>

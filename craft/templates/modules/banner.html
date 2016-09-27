@@ -1,10 +1,14 @@
-<div>
-  <ul>
-    {% for banner in block.bannerEntry.first.banners %}
-      <li>
-        <img src="{{ banner.icon.first.url }}" />
-        <div>{{ banner.body }}</div>
-      </li>
-    {% endfor %}
-  </ul>
+<div class="banner">
+  <div class="wrap">
+    <ul class="banner-list">
+
+      {% for banner in block.bannerEntry.first.banners %}
+        <li class="banner-item">
+          <img class="banner-image" src="{{ banner.icon.first.url }}" />
+          <div class="banner-text">{{ banner.body }}</div>
+        </li>
+      {% endfor %}
+
+    </ul>
+  </div>
 </div>

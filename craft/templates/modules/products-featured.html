@@ -1,11 +1,15 @@
-<div>
-  <h2>{{ block.heading }}</h2>
-  <ul>
-    {% for product in block.products %}
-      <li>
-        <img src="{{ product.productImages.first.url }}" style="height: 100px; width: auto;"/>
-        <p>{{ product.title }}</p>
-      </li>
-    {% endfor %}
-  </ul>
+<div class="products-featured">
+  <div class="wrap">
+    <h2 class="products-featured-heading">{{ block.heading }}</h2>
+    <ul class="products-featured-list">
+
+      {% for product in block.products %}
+        <li class="products-featured-item">
+          <img class="products-featured-image" src="{{ product.productImages.first.url }}"/>
+          <p class="producst-featured-info">{{ product.title }}</p>
+        </li>
+      {% endfor %}
+
+    </ul>
+  </div>
 </div>

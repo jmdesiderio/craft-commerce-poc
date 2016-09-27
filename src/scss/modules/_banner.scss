@@ -1,0 +1,26 @@
+.banner {
+  border-bottom: 1px solid $black;
+
+  .banner-list {
+    display: flex;
+  }
+
+  .banner-item {
+    align-items: center;
+    border-right: 1px solid $black;
+    display: flex;
+    flex: 1 1 25%;
+    justify-content: center;
+    margin: 1rem 0;
+    padding: 0 1rem;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  .banner-image {
+    margin: 0 1rem 0 0;
+    max-height: 3rem;
+  }
+}
