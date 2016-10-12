@@ -4,23 +4,23 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
+class ComposerStaticInit2656c48b40227a764d349dc4c34de444
 {
     public static $files = array (
-        'e40631d46120a9c38ea139981f8dab26' => __DIR__ . '/..' . '/ircmaxell/password-compat/lib/password.php',
-        'edc6464955a37aa4d5fbf39d40fb6ee7' => __DIR__ . '/..' . '/symfony/polyfill-php55/bootstrap.php',
-        '3e2471375464aac821502deb0ac64275' => __DIR__ . '/..' . '/symfony/polyfill-php54/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '8cd2fca4db21bffce1ad0612f7caeec4' => __DIR__ . '/..' . '/ramsey/array_column/src/array_column.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
-            'Symfony\\Polyfill\\Php55\\' => 23,
-            'Symfony\\Polyfill\\Php54\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\HttpFoundation\\' => 33,
             'Symfony\\Component\\EventDispatcher\\' => 34,
+        ),
+        'P' => 
+        array (
+            'PhpUnitsOfMeasure\\' => 18,
         ),
         'O' => 
         array (
@@ -57,14 +57,6 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
     );
 
     public static $prefixDirsPsr4 = array (
-        'Symfony\\Polyfill\\Php55\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php55',
-        ),
-        'Symfony\\Polyfill\\Php54\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php54',
-        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -76,6 +68,10 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Symfony\\Component\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
+        ),
+        'PhpUnitsOfMeasure\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source',
         ),
         'Omnipay\\WorldPay\\' => 
         array (
@@ -184,6 +180,13 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
     );
 
     public static $prefixesPsr0 = array (
+        'S' => 
+        array (
+            'Snowcap\\Vat' => 
+            array (
+                0 => __DIR__ . '/..' . '/snowcap/vat-validation/src',
+            ),
+        ),
         'O' => 
         array (
             'Omnipay\\Common\\' => 
@@ -216,7 +219,6 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'CPDF_Adapter' => __DIR__ . '/..' . '/dompdf/dompdf/include/cpdf_adapter.cls.php',
         'CSS_Color' => __DIR__ . '/..' . '/dompdf/dompdf/include/css_color.cls.php',
         'Cached_PDF_Decorator' => __DIR__ . '/..' . '/dompdf/dompdf/include/cached_pdf_decorator.cls.php',
-        'CallbackFilterIterator' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/CallbackFilterIterator.php',
         'Canvas' => __DIR__ . '/..' . '/dompdf/dompdf/include/canvas.cls.php',
         'Canvas_Factory' => __DIR__ . '/..' . '/dompdf/dompdf/include/canvas_factory.cls.php',
         'Cellmap' => __DIR__ . '/..' . '/dompdf/dompdf/include/cellmap.cls.php',
@@ -251,6 +253,7 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Commerce\\Gateways\\Omnipay\\Mollie_GatewayAdapter' => __DIR__ . '/../../..' . '/commerce/Commerce/Gateways/Omnipay/Mollie_GatewayAdapter.php',
         'Commerce\\Gateways\\Omnipay\\MultiSafepay_GatewayAdapter' => __DIR__ . '/../../..' . '/commerce/Commerce/Gateways/Omnipay/MultiSafepay_GatewayAdapter.php',
         'Commerce\\Gateways\\Omnipay\\NetBanx_GatewayAdapter' => __DIR__ . '/../../..' . '/commerce/Commerce/Gateways/Omnipay/NetBanx_GatewayAdapter.php',
+        'Commerce\\Gateways\\Omnipay\\NetBanx_Hosted_GatewayAdapter' => __DIR__ . '/../../..' . '/commerce/Commerce/Gateways/Omnipay/NetBanx_Hosted_GatewayAdapter.php',
         'Commerce\\Gateways\\Omnipay\\Netaxept_GatewayAdapter' => __DIR__ . '/../../..' . '/commerce/Commerce/Gateways/Omnipay/Netaxept_GatewayAdapter.php',
         'Commerce\\Gateways\\Omnipay\\PayFast_GatewayAdapter' => __DIR__ . '/../../..' . '/commerce/Commerce/Gateways/Omnipay/PayFast_GatewayAdapter.php',
         'Commerce\\Gateways\\Omnipay\\PayPal_Express_GatewayAdapter' => __DIR__ . '/../../..' . '/commerce/Commerce/Gateways/Omnipay/PayPal_Express_GatewayAdapter.php',
@@ -284,6 +287,7 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Commerce\\Seed\\Commerce_InstallSeeder' => __DIR__ . '/../../..' . '/commerce/Commerce/Seed/Commerce_InstallSeeder.php',
         'Commerce\\Seed\\Commerce_SeederInterface' => __DIR__ . '/../../..' . '/commerce/Commerce/Seed/Commerce_SeederInterface.php',
         'Commerce\\Seed\\Commerce_StatesSeeder' => __DIR__ . '/../../..' . '/commerce/Commerce/Seed/Commerce_StatesSeeder.php',
+        'Commerce\\Traits\\Commerce_ModelRelationsTrait' => __DIR__ . '/../../..' . '/commerce/Commerce/Traits/Commerce_ModelRelationsTrait.php',
         'DOMPDF' => __DIR__ . '/..' . '/dompdf/dompdf/include/dompdf.cls.php',
         'DOMPDF_Exception' => __DIR__ . '/..' . '/dompdf/dompdf/include/dompdf_exception.cls.php',
         'DOMPDF_Image_Exception' => __DIR__ . '/..' . '/dompdf/dompdf/include/dompdf_image_exception.cls.php',
@@ -811,7 +815,9 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Omnipay\\Buckaroo\\Message\\PayPalPurchaseRequest' => __DIR__ . '/..' . '/omnipay/buckaroo/src/Message/PayPalPurchaseRequest.php',
         'Omnipay\\Buckaroo\\Message\\PurchaseRequest' => __DIR__ . '/..' . '/omnipay/buckaroo/src/Message/PurchaseRequest.php',
         'Omnipay\\Buckaroo\\Message\\PurchaseResponse' => __DIR__ . '/..' . '/omnipay/buckaroo/src/Message/PurchaseResponse.php',
+        'Omnipay\\Buckaroo\\Message\\SepaDirectDebitPurchaseRequest' => __DIR__ . '/..' . '/omnipay/buckaroo/src/Message/SepaDirectDebitPurchaseRequest.php',
         'Omnipay\\Buckaroo\\PayPalGateway' => __DIR__ . '/..' . '/omnipay/buckaroo/src/PayPalGateway.php',
+        'Omnipay\\Buckaroo\\SepaDirectDebitGateway' => __DIR__ . '/..' . '/omnipay/buckaroo/src/SepaDirectDebitGateway.php',
         'Omnipay\\CardSave\\Gateway' => __DIR__ . '/..' . '/omnipay/cardsave/src/Gateway.php',
         'Omnipay\\CardSave\\Message\\CompletePurchaseRequest' => __DIR__ . '/..' . '/omnipay/cardsave/src/Message/CompletePurchaseRequest.php',
         'Omnipay\\CardSave\\Message\\PurchaseRequest' => __DIR__ . '/..' . '/omnipay/cardsave/src/Message/PurchaseRequest.php',
@@ -846,6 +852,7 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Omnipay\\Common\\Message\\FetchIssuersResponseInterface' => __DIR__ . '/..' . '/omnipay/common/src/Omnipay/Common/Message/FetchIssuersResponseInterface.php',
         'Omnipay\\Common\\Message\\FetchPaymentMethodsResponseInterface' => __DIR__ . '/..' . '/omnipay/common/src/Omnipay/Common/Message/FetchPaymentMethodsResponseInterface.php',
         'Omnipay\\Common\\Message\\MessageInterface' => __DIR__ . '/..' . '/omnipay/common/src/Omnipay/Common/Message/MessageInterface.php',
+        'Omnipay\\Common\\Message\\NotificationInterface' => __DIR__ . '/..' . '/omnipay/common/src/Omnipay/Common/Message/NotificationInterface.php',
         'Omnipay\\Common\\Message\\RedirectResponseInterface' => __DIR__ . '/..' . '/omnipay/common/src/Omnipay/Common/Message/RedirectResponseInterface.php',
         'Omnipay\\Common\\Message\\RequestInterface' => __DIR__ . '/..' . '/omnipay/common/src/Omnipay/Common/Message/RequestInterface.php',
         'Omnipay\\Common\\Message\\ResponseInterface' => __DIR__ . '/..' . '/omnipay/common/src/Omnipay/Common/Message/ResponseInterface.php',
@@ -921,6 +928,7 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Omnipay\\Migs\\Message\\ThreePartyCompletePurchaseRequest' => __DIR__ . '/..' . '/omnipay/migs/src/Message/ThreePartyCompletePurchaseRequest.php',
         'Omnipay\\Migs\\Message\\ThreePartyPurchaseRequest' => __DIR__ . '/..' . '/omnipay/migs/src/Message/ThreePartyPurchaseRequest.php',
         'Omnipay\\Migs\\Message\\ThreePartyPurchaseResponse' => __DIR__ . '/..' . '/omnipay/migs/src/Message/ThreePartyPurchaseResponse.php',
+        'Omnipay\\Migs\\Message\\ThreePartyRefundRequest' => __DIR__ . '/..' . '/omnipay/migs/src/Message/ThreePartyRefundRequest.php',
         'Omnipay\\Migs\\Message\\TwoPartyPurchaseRequest' => __DIR__ . '/..' . '/omnipay/migs/src/Message/TwoPartyPurchaseRequest.php',
         'Omnipay\\Migs\\ThreePartyGateway' => __DIR__ . '/..' . '/omnipay/migs/src/ThreePartyGateway.php',
         'Omnipay\\Migs\\TwoPartyGateway' => __DIR__ . '/..' . '/omnipay/migs/src/TwoPartyGateway.php',
@@ -937,6 +945,8 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Omnipay\\Mollie\\Message\\FetchTransactionResponse' => __DIR__ . '/..' . '/omnipay/mollie/src/Message/FetchTransactionResponse.php',
         'Omnipay\\Mollie\\Message\\PurchaseRequest' => __DIR__ . '/..' . '/omnipay/mollie/src/Message/PurchaseRequest.php',
         'Omnipay\\Mollie\\Message\\PurchaseResponse' => __DIR__ . '/..' . '/omnipay/mollie/src/Message/PurchaseResponse.php',
+        'Omnipay\\Mollie\\Message\\RefundRequest' => __DIR__ . '/..' . '/omnipay/mollie/src/Message/RefundRequest.php',
+        'Omnipay\\Mollie\\Message\\RefundResponse' => __DIR__ . '/..' . '/omnipay/mollie/src/Message/RefundResponse.php',
         'Omnipay\\MultiSafepay\\Gateway' => __DIR__ . '/..' . '/omnipay/multisafepay/src/Gateway.php',
         'Omnipay\\MultiSafepay\\Message\\AbstractRequest' => __DIR__ . '/..' . '/omnipay/multisafepay/src/Message/AbstractRequest.php',
         'Omnipay\\MultiSafepay\\Message\\AbstractResponse' => __DIR__ . '/..' . '/omnipay/multisafepay/src/Message/AbstractResponse.php',
@@ -965,9 +975,21 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Omnipay\\MultiSafepay\\RestGateway' => __DIR__ . '/..' . '/omnipay/multisafepay/src/RestGateway.php',
         'Omnipay\\MultiSafepay\\XmlGateway' => __DIR__ . '/..' . '/omnipay/multisafepay/src/XmlGateway.php',
         'Omnipay\\NetBanx\\Gateway' => __DIR__ . '/..' . '/omnipay/netbanx/src/Gateway.php',
+        'Omnipay\\NetBanx\\HostedGateway' => __DIR__ . '/..' . '/omnipay/netbanx/src/HostedGateway.php',
         'Omnipay\\NetBanx\\Message\\AbstractRequest' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/AbstractRequest.php',
         'Omnipay\\NetBanx\\Message\\AuthorizeRequest' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/AuthorizeRequest.php',
         'Omnipay\\NetBanx\\Message\\CaptureRequest' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/CaptureRequest.php',
+        'Omnipay\\NetBanx\\Message\\HostedAbstractRequest' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/HostedAbstractRequest.php',
+        'Omnipay\\NetBanx\\Message\\HostedAbstractResponse' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/HostedAbstractResponse.php',
+        'Omnipay\\NetBanx\\Message\\HostedAuthorizeRequest' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/HostedAuthorizeRequest.php',
+        'Omnipay\\NetBanx\\Message\\HostedCaptureRequest' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/HostedCaptureRequest.php',
+        'Omnipay\\NetBanx\\Message\\HostedCaptureResponse' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/HostedCaptureResponse.php',
+        'Omnipay\\NetBanx\\Message\\HostedCompleteAuthorizeRequest' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/HostedCompleteAuthorizeRequest.php',
+        'Omnipay\\NetBanx\\Message\\HostedCompletePurchaseRequest' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/HostedCompletePurchaseRequest.php',
+        'Omnipay\\NetBanx\\Message\\HostedPurchaseRequest' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/HostedPurchaseRequest.php',
+        'Omnipay\\NetBanx\\Message\\HostedPurchaseResponse' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/HostedPurchaseResponse.php',
+        'Omnipay\\NetBanx\\Message\\HostedRefundRequest' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/HostedRefundRequest.php',
+        'Omnipay\\NetBanx\\Message\\HostedRefundResponse' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/HostedRefundResponse.php',
         'Omnipay\\NetBanx\\Message\\PurchaseRequest' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/PurchaseRequest.php',
         'Omnipay\\NetBanx\\Message\\Response' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/Response.php',
         'Omnipay\\NetBanx\\Message\\VoidRequest' => __DIR__ . '/..' . '/omnipay/netbanx/src/Message/VoidRequest.php',
@@ -987,6 +1009,7 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Omnipay\\PayFast\\Message\\PurchaseRequest' => __DIR__ . '/..' . '/omnipay/payfast/src/Message/PurchaseRequest.php',
         'Omnipay\\PayFast\\Message\\PurchaseResponse' => __DIR__ . '/..' . '/omnipay/payfast/src/Message/PurchaseResponse.php',
         'Omnipay\\PayPal\\ExpressGateway' => __DIR__ . '/..' . '/omnipay/paypal/src/ExpressGateway.php',
+        'Omnipay\\PayPal\\ExpressInContextGateway' => __DIR__ . '/..' . '/omnipay/paypal/src/ExpressInContextGateway.php',
         'Omnipay\\PayPal\\Message\\AbstractRequest' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/AbstractRequest.php',
         'Omnipay\\PayPal\\Message\\AbstractRestRequest' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/AbstractRestRequest.php',
         'Omnipay\\PayPal\\Message\\CaptureRequest' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/CaptureRequest.php',
@@ -995,7 +1018,11 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Omnipay\\PayPal\\Message\\ExpressCompleteAuthorizeRequest' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/ExpressCompleteAuthorizeRequest.php',
         'Omnipay\\PayPal\\Message\\ExpressCompleteOrderRequest' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/ExpressCompleteOrderRequest.php',
         'Omnipay\\PayPal\\Message\\ExpressCompletePurchaseRequest' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/ExpressCompletePurchaseRequest.php',
+        'Omnipay\\PayPal\\Message\\ExpressCompletePurchaseResponse' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/ExpressCompletePurchaseResponse.php',
         'Omnipay\\PayPal\\Message\\ExpressFetchCheckoutRequest' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/ExpressFetchCheckoutRequest.php',
+        'Omnipay\\PayPal\\Message\\ExpressInContextAuthorizeRequest' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/ExpressInContextAuthorizeRequest.php',
+        'Omnipay\\PayPal\\Message\\ExpressInContextAuthorizeResponse' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/ExpressInContextAuthorizeResponse.php',
+        'Omnipay\\PayPal\\Message\\ExpressInContextOrderRequest' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/ExpressInContextOrderRequest.php',
         'Omnipay\\PayPal\\Message\\ExpressOrderRequest' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/ExpressOrderRequest.php',
         'Omnipay\\PayPal\\Message\\ExpressTransactionSearchRequest' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/ExpressTransactionSearchRequest.php',
         'Omnipay\\PayPal\\Message\\ExpressTransactionSearchResponse' => __DIR__ . '/..' . '/omnipay/paypal/src/Message/ExpressTransactionSearchResponse.php',
@@ -1033,6 +1060,9 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Omnipay\\PayPal\\Support\\InstantUpdateApi\\ShippingOption' => __DIR__ . '/..' . '/omnipay/paypal/src/Support/InstantUpdateApi/ShippingOption.php',
         'Omnipay\\Payflow\\Message\\AuthorizeRequest' => __DIR__ . '/..' . '/omnipay/payflow/src/Message/AuthorizeRequest.php',
         'Omnipay\\Payflow\\Message\\CaptureRequest' => __DIR__ . '/..' . '/omnipay/payflow/src/Message/CaptureRequest.php',
+        'Omnipay\\Payflow\\Message\\CreateCardRequest' => __DIR__ . '/..' . '/omnipay/payflow/src/Message/CreateCardRequest.php',
+        'Omnipay\\Payflow\\Message\\FetchTransactionRequest' => __DIR__ . '/..' . '/omnipay/payflow/src/Message/FetchTransactionRequest.php',
+        'Omnipay\\Payflow\\Message\\InquiryRequest' => __DIR__ . '/..' . '/omnipay/payflow/src/Message/InquiryRequest.php',
         'Omnipay\\Payflow\\Message\\PurchaseRequest' => __DIR__ . '/..' . '/omnipay/payflow/src/Message/PurchaseRequest.php',
         'Omnipay\\Payflow\\Message\\RefundRequest' => __DIR__ . '/..' . '/omnipay/payflow/src/Message/RefundRequest.php',
         'Omnipay\\Payflow\\Message\\Response' => __DIR__ . '/..' . '/omnipay/payflow/src/Message/Response.php',
@@ -1063,17 +1093,30 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Omnipay\\Pin\\Message\\Response' => __DIR__ . '/..' . '/omnipay/pin/src/Message/Response.php',
         'Omnipay\\SagePay\\DirectGateway' => __DIR__ . '/..' . '/omnipay/sagepay/src/DirectGateway.php',
         'Omnipay\\SagePay\\Message\\AbstractRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/AbstractRequest.php',
-        'Omnipay\\SagePay\\Message\\CaptureRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/CaptureRequest.php',
         'Omnipay\\SagePay\\Message\\DirectAuthorizeRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/DirectAuthorizeRequest.php',
         'Omnipay\\SagePay\\Message\\DirectCompleteAuthorizeRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/DirectCompleteAuthorizeRequest.php',
         'Omnipay\\SagePay\\Message\\DirectPurchaseRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/DirectPurchaseRequest.php',
-        'Omnipay\\SagePay\\Message\\RefundRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/RefundRequest.php',
+        'Omnipay\\SagePay\\Message\\DirectRepeatPaymentRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/DirectRepeatPaymentRequest.php',
+        'Omnipay\\SagePay\\Message\\DirectTokenRegistrationRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/DirectTokenRegistrationRequest.php',
         'Omnipay\\SagePay\\Message\\Response' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/Response.php',
         'Omnipay\\SagePay\\Message\\ServerAuthorizeRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/ServerAuthorizeRequest.php',
         'Omnipay\\SagePay\\Message\\ServerAuthorizeResponse' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/ServerAuthorizeResponse.php',
         'Omnipay\\SagePay\\Message\\ServerCompleteAuthorizeRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/ServerCompleteAuthorizeRequest.php',
         'Omnipay\\SagePay\\Message\\ServerCompleteAuthorizeResponse' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/ServerCompleteAuthorizeResponse.php',
+        'Omnipay\\SagePay\\Message\\ServerNotifyRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/ServerNotifyRequest.php',
+        'Omnipay\\SagePay\\Message\\ServerNotifyResponse' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/ServerNotifyResponse.php',
         'Omnipay\\SagePay\\Message\\ServerPurchaseRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/ServerPurchaseRequest.php',
+        'Omnipay\\SagePay\\Message\\ServerTokenRegistrationCompleteRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/ServerTokenRegistrationCompleteRequest.php',
+        'Omnipay\\SagePay\\Message\\ServerTokenRegistrationCompleteResponse' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/ServerTokenRegistrationCompleteResponse.php',
+        'Omnipay\\SagePay\\Message\\ServerTokenRegistrationRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/ServerTokenRegistrationRequest.php',
+        'Omnipay\\SagePay\\Message\\ServerTokenRegistrationResponse' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/ServerTokenRegistrationResponse.php',
+        'Omnipay\\SagePay\\Message\\SharedAbortRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/SharedAbortRequest.php',
+        'Omnipay\\SagePay\\Message\\SharedCaptureRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/SharedCaptureRequest.php',
+        'Omnipay\\SagePay\\Message\\SharedRefundRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/SharedRefundRequest.php',
+        'Omnipay\\SagePay\\Message\\SharedRepeatAuthorizeRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/SharedRepeatAuthorizeRequest.php',
+        'Omnipay\\SagePay\\Message\\SharedRepeatPurchaseRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/SharedRepeatPurchaseRequest.php',
+        'Omnipay\\SagePay\\Message\\SharedTokenRemovalRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/SharedTokenRemovalRequest.php',
+        'Omnipay\\SagePay\\Message\\SharedVoidRequest' => __DIR__ . '/..' . '/omnipay/sagepay/src/Message/SharedVoidRequest.php',
         'Omnipay\\SagePay\\ServerGateway' => __DIR__ . '/..' . '/omnipay/sagepay/src/ServerGateway.php',
         'Omnipay\\SecurePay\\DirectPostGateway' => __DIR__ . '/..' . '/omnipay/securepay/src/DirectPostGateway.php',
         'Omnipay\\SecurePay\\Message\\DirectPostAbstractRequest' => __DIR__ . '/..' . '/omnipay/securepay/src/Message/DirectPostAbstractRequest.php',
@@ -1148,10 +1191,35 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Page_Cache' => __DIR__ . '/..' . '/dompdf/dompdf/include/page_cache.cls.php',
         'Page_Frame_Decorator' => __DIR__ . '/..' . '/dompdf/dompdf/include/page_frame_decorator.cls.php',
         'Page_Frame_Reflower' => __DIR__ . '/..' . '/dompdf/dompdf/include/page_frame_reflower.cls.php',
+        'PhpUnitsOfMeasure\\AbstractPhysicalQuantity' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/AbstractPhysicalQuantity.php',
+        'PhpUnitsOfMeasure\\Exception\\AbstractPhysicalQuantityException' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/Exception/AbstractPhysicalQuantityException.php',
+        'PhpUnitsOfMeasure\\Exception\\DuplicateUnitNameOrAlias' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/Exception/DuplicateUnitNameOrAlias.php',
+        'PhpUnitsOfMeasure\\Exception\\NonNumericValue' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/Exception/NonNumericValue.php',
+        'PhpUnitsOfMeasure\\Exception\\NonStringUnitName' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/Exception/NonStringUnitName.php',
+        'PhpUnitsOfMeasure\\Exception\\PhysicalQuantityMismatch' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/Exception/PhysicalQuantityMismatch.php',
+        'PhpUnitsOfMeasure\\Exception\\UnknownUnitOfMeasure' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/Exception/UnknownUnitOfMeasure.php',
+        'PhpUnitsOfMeasure\\HasSIUnitsTrait' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/HasSIUnitsTrait.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantityInterface' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantityInterface.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\Acceleration' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/Acceleration.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\Angle' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/Angle.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\Area' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/Area.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\ElectricCurrent' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/ElectricCurrent.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\Energy' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/Energy.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\Length' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/Length.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\LuminousIntensity' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/LuminousIntensity.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\Mass' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/Mass.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\Pressure' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/Pressure.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\Quantity' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/Quantity.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\SolidAngle' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/SolidAngle.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\Temperature' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/Temperature.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\Time' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/Time.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\Velocity' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/Velocity.php',
+        'PhpUnitsOfMeasure\\PhysicalQuantity\\Volume' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/PhysicalQuantity/Volume.php',
+        'PhpUnitsOfMeasure\\UnitOfMeasure' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/UnitOfMeasure.php',
+        'PhpUnitsOfMeasure\\UnitOfMeasureInterface' => __DIR__ . '/..' . '/triplepoint/php-units-of-measure/source/UnitOfMeasureInterface.php',
         'Positioner' => __DIR__ . '/..' . '/dompdf/dompdf/include/positioner.cls.php',
-        'RecursiveCallbackFilterIterator' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/RecursiveCallbackFilterIterator.php',
         'Renderer' => __DIR__ . '/..' . '/dompdf/dompdf/include/renderer.cls.php',
-        'SessionHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php54/Resources/stubs/SessionHandlerInterface.php',
+        'Snowcap\\Vat\\Validation' => __DIR__ . '/..' . '/snowcap/vat-validation/src/Snowcap/Vat/Validation.php',
         'Style' => __DIR__ . '/..' . '/dompdf/dompdf/include/style.cls.php',
         'Stylesheet' => __DIR__ . '/..' . '/dompdf/dompdf/include/stylesheet.cls.php',
         'Symfony\\Component\\EventDispatcher\\ContainerAwareEventDispatcher' => __DIR__ . '/..' . '/symfony/event-dispatcher/ContainerAwareEventDispatcher.php',
@@ -1208,7 +1276,6 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Symfony\\Component\\HttpFoundation\\Session\\Session' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Session.php',
         'Symfony\\Component\\HttpFoundation\\Session\\SessionBagInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Session/SessionBagInterface.php',
         'Symfony\\Component\\HttpFoundation\\Session\\SessionInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Session/SessionInterface.php',
-        'Symfony\\Component\\HttpFoundation\\Session\\Storage\\Handler\\LegacyPdoSessionHandler' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Storage/Handler/LegacyPdoSessionHandler.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Storage\\Handler\\MemcacheSessionHandler' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Storage/Handler/MemcacheSessionHandler.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Storage\\Handler\\MemcachedSessionHandler' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Storage/Handler/MemcachedSessionHandler.php',
         'Symfony\\Component\\HttpFoundation\\Session\\Storage\\Handler\\MongoDbSessionHandler' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Storage/Handler/MongoDbSessionHandler.php',
@@ -1228,9 +1295,6 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
         'Symfony\\Component\\HttpFoundation\\Session\\Storage\\SessionStorageInterface' => __DIR__ . '/..' . '/symfony/http-foundation/Session/Storage/SessionStorageInterface.php',
         'Symfony\\Component\\HttpFoundation\\StreamedResponse' => __DIR__ . '/..' . '/symfony/http-foundation/StreamedResponse.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
-        'Symfony\\Polyfill\\Php54\\Php54' => __DIR__ . '/..' . '/symfony/polyfill-php54/Php54.php',
-        'Symfony\\Polyfill\\Php55\\Php55' => __DIR__ . '/..' . '/symfony/polyfill-php55/Php55.php',
-        'Symfony\\Polyfill\\Php55\\Php55ArrayColumn' => __DIR__ . '/..' . '/symfony/polyfill-php55/Php55ArrayColumn.php',
         'TCPDF_Adapter' => __DIR__ . '/..' . '/dompdf/dompdf/include/tcpdf_adapter.cls.php',
         'Table_Cell_Frame_Decorator' => __DIR__ . '/..' . '/dompdf/dompdf/include/table_cell_frame_decorator.cls.php',
         'Table_Cell_Frame_Reflower' => __DIR__ . '/..' . '/dompdf/dompdf/include/table_cell_frame_reflower.cls.php',
@@ -1252,10 +1316,10 @@ class ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitf39bf4fcb0c1ee52b4a1434649f3fad6::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit2656c48b40227a764d349dc4c34de444::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit2656c48b40227a764d349dc4c34de444::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit2656c48b40227a764d349dc4c34de444::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit2656c48b40227a764d349dc4c34de444::$classMap;
 
         }, null, ClassLoader::class);
     }

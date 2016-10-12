@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
+    'Snowcap\\Vat' => array($vendorDir . '/snowcap/vat-validation/src'),
     'Omnipay\\Common\\' => array($vendorDir . '/omnipay/common/src'),
     'Guzzle\\Tests' => array($vendorDir . '/guzzle/guzzle/tests'),
     'Guzzle' => array($vendorDir . '/guzzle/guzzle/src'),

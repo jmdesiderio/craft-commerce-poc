@@ -27,6 +27,18 @@ class DirectAuthorizeRequest extends AbstractRequest
         $data['ApplyAVSCV2'] = $this->getApplyAVSCV2() ?: 0;
         $data['Apply3DSecure'] = $this->getApply3DSecure() ?: 0;
 
+        $data['CreateToken'] = $this->getCreateToken();
+
+        // Creating a token should not be permissible at
+        // the same time as using a token.
+        if (! $data['CreateToken'] && $this->getToken()) {
+            // If a token has been supplied, and we are NOT asking to generate
+            // a new token here, then use this token and optionally store it
+            // again for further use.
+            $data['Token'] = $this->getToken();
+            $data['StoreToken'] = $this->getStoreToken();
+        }
+
         if ($this->getReferrerId()) {
             $data['ReferrerID'] = $this->getReferrerId();
         }
@@ -54,12 +66,35 @@ class DirectAuthorizeRequest extends AbstractRequest
         $data['DeliveryPhone'] = $card->getShippingPhone();
         $data['CustomerEMail'] = $card->getEmail();
 
-        $basketXML = $this->getItemData();
-        if (!empty($basketXML)) {
-            $data['BasketXML'] = $basketXML;
+        if ($this->getUseOldBasketFormat()) {
+            $basket = $this->getItemDataNonXML();
+            if (!empty($basket)) {
+                $data['Basket'] = $basket;
+            }
+        } else {
+            $basketXML = $this->getItemData();
+            if (!empty($basketXML)) {
+                $data['BasketXML'] = $basketXML;
+            }
         }
 
         return $data;
+    }
+
+    /**
+     * SagePay throws an error if passed an IPv6 address.
+     * Filter out addresses that are not IPv4 format.
+     */
+    public function getClientIp()
+    {
+        $ip = parent::getClientIp();
+
+        // OmniPay core could do with a helper for this.
+        if (! preg_match('/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/', $ip)) {
+            $ip = null;
+        }
+
+        return $ip;
     }
 
     public function getData()
@@ -68,7 +103,12 @@ class DirectAuthorizeRequest extends AbstractRequest
         $this->getCard()->validate();
 
         $data['CardHolder'] = $this->getCard()->getName();
-        $data['CardNumber'] = $this->getCard()->getNumber();
+
+        // Card number should not be provided if token is being provided instead
+        if (!$this->getToken()) {
+            $data['CardNumber'] = $this->getCard()->getNumber();
+        }
+
         $data['CV2'] = $this->getCard()->getCvv();
         $data['ExpiryDate'] = $this->getCard()->getExpiryDate('my');
         $data['CardType'] = $this->getCardBrand();
