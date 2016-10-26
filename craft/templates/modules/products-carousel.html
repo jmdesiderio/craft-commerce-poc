@@ -5,12 +5,14 @@
 
       {% for product in block.products %}
         <li class="products-carousel-item">
-          <img class="products-carousel-image" src="{{ product.productImages.first.url }}"/>
-          <p class="products-carousel-text">{{ product.title }}</p>
+          <a href="{{ product.url }}">
+            <img class="products-carousel-image" src="{{ product.productImages.first.url }}"/>
+            <p class="products-carousel-text">{{ product.title }}</p>
+          </a>
         </li>
       {% endfor %}
 
     </ul>
-    <a class="products-carousel-link" href="{{ block.linkPage.first.url }}">{{ block.linkText}}</a>
+    <a class="products-carousel-link" href="{{ block.linkPage.first.url }}">{{ block.linkText }}</a>
   </div>
 </div>

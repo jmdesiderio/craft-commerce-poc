@@ -1,0 +1,16 @@
+.product-thumbnail {
+  align-items: center;
+  display: flex;
+  flex: 0 1 20%;
+  flex-direction: column;
+  padding: 1rem;
+
+  .product-thumbnail-image {
+    max-height: 20rem;
+  }
+
+  .product-thumbnail-form {
+    display: flex;
+    flex-direction: column;
+  }
+}

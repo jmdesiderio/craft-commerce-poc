@@ -1,0 +1,32 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+  <div class="products">
+
+    {% for product in craft.commerce.products.limit(5).find() %}
+      <div class="product-thumbnail">
+        <img class="product-thumbnail-image" src="{{ product.productImages.first.url }}" />
+        <a href="{{ product.url }}">{{ product.title }}</a>
+
+        {% if product.variants | length %}
+          <form class="product-thumbnail-form" method="POST">
+            <input type="hidden" name="action" value="commerce/cart/updateCart">
+            <input type="hidden" name="redirect" value="cart">
+            <input type="hidden" name="qty" value="1">
+            <input type="hidden" name="purchasableId" value="{{ product.defaultVariant.purchasableId }}" />
+            {{ getCsrfInput() }}
+            <div>{{ product.defaultVariant.price | currency(cart.currency) }}</div>
+            {% if product.totalStock > 0 %}
+              <button type="submit">{{ "Add to cart" | t }}</button>
+            {% else %}
+              {{ "Out of Stock" | t }}
+            {% endif %}
+          </form>
+        {% endif %}
+      </div>
+    {% endfor %}
+
+  </div>
+
+{% endblock %}
