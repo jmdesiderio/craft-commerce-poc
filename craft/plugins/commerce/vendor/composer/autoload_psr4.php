@@ -9,7 +9,7 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
     'Symfony\\Component\\EventDispatcher\\' => array($vendorDir . '/symfony/event-dispatcher'),
-    'PhpUnitsOfMeasure\\' => array($vendorDir . '/triplepoint/php-units-of-measure/source'),
+    'PhpUnitsOfMeasure\\' => array($vendorDir . '/php-units-of-measure/php-units-of-measure/source'),
     'Omnipay\\WorldPay\\' => array($vendorDir . '/omnipay/worldpay/src'),
     'Omnipay\\TwoCheckout\\' => array($vendorDir . '/omnipay/2checkout/src'),
     'Omnipay\\TargetPay\\' => array($vendorDir . '/omnipay/targetpay/src'),

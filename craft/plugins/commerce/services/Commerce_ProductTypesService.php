@@ -442,9 +442,20 @@ class Commerce_ProductTypesService extends BaseApplicationComponent
                 // Update the service level cache
                 $this->_productTypesById[$productType->id] = $productType;
 
+
+                // Have any of the product type categories changed?
+                if (!$isNewProductType)
+                {
+                    // Get all previous categories
+                    $oldShippingCategories = $oldProductType->getShippingCategories();
+                    $oldTaxCategories = $oldProductType->getTaxCategories();
+                }
+
+                // Remove all existing categories
                 craft()->db->createCommand()->delete('commerce_producttypes_shippingcategories','productTypeId = :xid',[':xid'=>$productType->id]);
                 craft()->db->createCommand()->delete('commerce_producttypes_taxcategories','productTypeId = :xid',[':xid'=>$productType->id]);
 
+                // Add back the new categories
                 foreach ($productType->getShippingCategories() as $category)
                 {
                     $data = ['productTypeId'=>$productType->id,'shippingCategoryId'=>$category->id];
@@ -455,6 +466,46 @@ class Commerce_ProductTypesService extends BaseApplicationComponent
                 {
                     $data = ['productTypeId'=>$productType->id,'taxCategoryId'=>$category->id];
                     craft()->db->createCommand()->insert('commerce_producttypes_taxcategories',$data);
+                }
+
+                // Update all products that used the removed tax & shipping categories
+                if (!$isNewProductType)
+                {
+                    // Grab the new categories
+                    $newShippingCategories = $productType->getShippingCategories();
+                    $newTaxCategories = $productType->getTaxCategories();
+
+                    // Were any categories removed?
+                    $removedShippingCategoryIds = array_diff(array_keys($oldShippingCategories), array_keys($newShippingCategories));
+                    $removedTaxCategoryIds = array_diff(array_keys($oldTaxCategories), array_keys($newTaxCategories));
+
+                    // Update all products that used the removed product type shipping categories
+                    if ($removedShippingCategoryIds)
+                    {
+                        $defaultShippingCategory = array_values($productType->getShippingCategories())[0];
+                        if ($defaultShippingCategory)
+                        {
+                            $data = ['shippingCategoryId' => $defaultShippingCategory->id];
+                            $criteria = new \CDbCriteria;
+                            $criteria->addInCondition("shippingCategoryId", $removedShippingCategoryIds);
+                            $criteria->addCondition('typeId='.$productType->id);
+                            Commerce_ProductRecord::model()->updateAll($data, $criteria);
+                        }
+                    }
+
+                    // Update all products that used the removed product type tax categories
+                    if ($removedTaxCategoryIds)
+                    {
+                        $defaultTaxCategory = array_values($productType->getTaxCategories())[0];
+                        if ($defaultTaxCategory)
+                        {
+                            $data = ['taxCategoryId' => $defaultTaxCategory->id];
+                            $criteria = new \CDbCriteria;
+                            $criteria->addInCondition("taxCategoryId", $removedTaxCategoryIds);
+                            $criteria->addCondition('typeId='.$productType->id);
+                            Commerce_ProductRecord::model()->updateAll($data, $criteria);
+                        }
+                    }
                 }
 
                 $newLocaleData = [];
@@ -593,6 +644,11 @@ class Commerce_ProductTypesService extends BaseApplicationComponent
 
                     if (!$isNewProductType)
                     {
+
+                    }
+
+                    if (!$isNewProductType)
+                    {
                         $criteria = craft()->elements->getCriteria('Commerce_Product');
 
                         // Get the most-primary locale that this section was already enabled in
@@ -601,7 +657,7 @@ class Commerce_ProductTypesService extends BaseApplicationComponent
                         if ($locales)
                         {
                             $criteria->locale = $locales[0];
-                            $criteria->productTypeId = $productType->id;
+                            $criteria->typeId = $productType->id;
                             $criteria->status = null;
                             $criteria->localeEnabled = null;
                             $criteria->limit = null;
@@ -646,7 +702,7 @@ class Commerce_ProductTypesService extends BaseApplicationComponent
         CommerceDbHelper::beginStackedTransaction();
         try
         {
-            $productType = $this->Id($id);
+            $productType = $this->getProductTypeById($id);
 
             $criteria = craft()->elements->getCriteria('Commerce_Product');
             $criteria->typeId = $productType->id;

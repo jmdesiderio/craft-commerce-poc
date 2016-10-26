@@ -154,7 +154,7 @@ class CommercePlugin extends BasePlugin
 	                    'm160825_010101_Commerce_AddMaxQtyToDiscount.php',
 	                    'm160826_010101_Commerce_NewAddressFields.php',
 	                    'm160915_010101_Commerce_RenameCurrencies',
-	                    'm160916_010102_Commerce_PdfNameFormat',
+	                    'm160916_010102_Commerce_PdfFilenameFormat',
                         'm160917_010103_Commerce_DescriptionFormat',
                         'm160917_010104_Commerce_ShippingCategories',
                         'm160917_010104_Commerce_OrderLocale',
@@ -163,7 +163,9 @@ class CommercePlugin extends BasePlugin
                         'm161001_010101_Commerce_LineItemShippingCat',
                         'm161001_010102_Commerce_DiscountOrdering',
                         'm161001_010103_Commerce_DiscountStopProcessing',
-                        'm161001_010104_Commerce_SaveTransactionCode'
+                        'm161001_010104_Commerce_SaveTransactionCode',
+                        'm161001_010105_Commerce_RemovePaymentCurrencyName',
+                        'm161024_010101_Commerce_FixDefaultShippingAndTaxCategoriesOnProducts'
                     );
 
                     foreach ($migrations as $migrationClass) {
@@ -301,7 +303,7 @@ class CommercePlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '1.2.1323';
+        return '1.2.1327';
     }
 
     /**
@@ -311,7 +313,7 @@ class CommercePlugin extends BasePlugin
      */
     public function getSchemaVersion()
     {
-        return '1.2.67';
+        return '1.2.72';
     }
 
     /**

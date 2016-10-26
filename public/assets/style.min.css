@@ -429,19 +429,19 @@ small {
   width: device-width; }
 
 .content {
-  margin: 10rem 0;
-  min-height: calc(100% - 10rem); }
+  margin: 12rem 0;
+  min-height: calc(100% - 12rem); }
   .content h1 {
     font-size: 2rem;
     margin: 0; }
   .content a {
-    color: #da5a47;
+    color: #00416b;
     text-decoration: none; }
     .content a:hover {
       text-decoration: underline; }
 
 .footer {
-  background: #da5a47;
+  background: #00416b;
   color: #fff;
   font-size: .75rem;
   padding: 1rem;
@@ -450,28 +450,44 @@ small {
     color: #fff; }
 
 .header {
-  background: #da5a47;
+  background: #00416b;
   color: #fff;
-  height: 10rem;
+  height: 12rem;
   left: 0;
   position: fixed;
   text-align: center;
   top: 0;
   width: 100%;
   z-index: 1; }
+  .header .wrap {
+    height: 64%; }
   .header .header-language-switcher,
-  .header .header-logo,
   .header .header-user-nav {
+    -ms-flex-align: center;
+        align-items: center;
+    bottom: 0;
     display: -ms-flexbox;
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0; }
+    position: absolute;
+    top: 0; }
+  .header .header-language-switcher {
+    left: 2rem; }
+  .header .header-list-item {
+    padding: .5rem; }
   .header .header-logo {
+    -ms-flex-align: center;
+        align-items: center;
+    display: -ms-flexbox;
+    display: flex;
     font-size: 1.875rem;
     font-weight: normal;
+    height: 100%;
+    -ms-flex-pack: center;
+        justify-content: center;
     line-height: 1;
     margin: 0; }
+  .header .header-user-nav {
+    right: 2rem; }
   .header .header-logo-link {
     color: #fff;
     text-decoration: none; }
@@ -577,10 +593,8 @@ small {
   width: auto; }
 
 .promo-bar {
+  background-color: #ff9700;
   display: block;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0; }
+  padding: .375rem 0; }
 
 /*# sourceMappingURL=style.min.css.map*/

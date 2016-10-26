@@ -85,12 +85,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/event-dispatcher.git",
-            "reference": "889983a79a043dfda68f38c38b6dba092dd49cd8"
+            "reference": "25c576abd4e0f212e678fe8b2bd9a9a98c7ea934"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/889983a79a043dfda68f38c38b6dba092dd49cd8",
-            "reference": "889983a79a043dfda68f38c38b6dba092dd49cd8",
+            "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/25c576abd4e0f212e678fe8b2bd9a9a98c7ea934",
+            "reference": "25c576abd4e0f212e678fe8b2bd9a9a98c7ea934",
             "shasum": ""
         },
         "require": {
@@ -107,7 +107,7 @@
             "symfony/dependency-injection": "",
             "symfony/http-kernel": ""
         },
-        "time": "2016-07-28 16:56:28",
+        "time": "2016-10-13 01:43:15",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -306,12 +306,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/http-foundation.git",
-            "reference": "a253dca70944b62ea371d26a03db5c9cbb657525"
+            "reference": "47bb765b2181b1eba556efae03526ce4730176ae"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/a253dca70944b62ea371d26a03db5c9cbb657525",
-            "reference": "a253dca70944b62ea371d26a03db5c9cbb657525",
+            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/47bb765b2181b1eba556efae03526ce4730176ae",
+            "reference": "47bb765b2181b1eba556efae03526ce4730176ae",
             "shasum": ""
         },
         "require": {
@@ -321,7 +321,7 @@
         "require-dev": {
             "symfony/expression-language": "~2.8|~3.0"
         },
-        "time": "2016-10-07 19:50:49",
+        "time": "2016-10-18 04:30:21",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1291,17 +1291,17 @@
     },
     {
         "name": "omnipay/netbanx",
-        "version": "dev-dev-hostedpayments",
-        "version_normalized": "dev-dev-hostedpayments",
+        "version": "v2.2",
+        "version_normalized": "2.2.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/pixelandtonic/omnipay-netbanx.git",
-            "reference": "55c92d3d2fa8eef5968c186a442ac967b83f50d0"
+            "url": "https://github.com/thephpleague/omnipay-netbanx.git",
+            "reference": "3684bbbf0dbdb977c1484d7252d776d81c68c813"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/pixelandtonic/omnipay-netbanx/zipball/55c92d3d2fa8eef5968c186a442ac967b83f50d0",
-            "reference": "55c92d3d2fa8eef5968c186a442ac967b83f50d0",
+            "url": "https://api.github.com/repos/thephpleague/omnipay-netbanx/zipball/3684bbbf0dbdb977c1484d7252d776d81c68c813",
+            "reference": "3684bbbf0dbdb977c1484d7252d776d81c68c813",
             "shasum": ""
         },
         "require": {
@@ -1310,19 +1310,20 @@
         "require-dev": {
             "omnipay/tests": "~2.0"
         },
-        "time": "2016-09-15 07:21:47",
+        "time": "2016-09-21 10:52:03",
         "type": "library",
         "extra": {
             "branch-alias": {
                 "dev-master": "2.0.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "Omnipay\\NetBanx\\": "src/"
             }
         },
+        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "MIT"
         ],
@@ -1345,10 +1346,7 @@
             "omnipay",
             "pay",
             "payment"
-        ],
-        "support": {
-            "source": "https://github.com/pixelandtonic/omnipay-netbanx/tree/dev-hostedpayments"
-        }
+        ]
     },
     {
         "name": "omnipay/payfast",
@@ -1535,17 +1533,17 @@
     },
     {
         "name": "omnipay/paypal",
-        "version": "dev-error10486handler",
-        "version_normalized": "dev-error10486handler",
+        "version": "v2.6.1",
+        "version_normalized": "2.6.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/pixelandtonic/omnipay-paypal.git",
-            "reference": "07c8127710081b38d02b151f6dc2b31602896724"
+            "url": "https://github.com/thephpleague/omnipay-paypal.git",
+            "reference": "942d616e87578330a4f48feab56430527889c07e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/pixelandtonic/omnipay-paypal/zipball/07c8127710081b38d02b151f6dc2b31602896724",
-            "reference": "07c8127710081b38d02b151f6dc2b31602896724",
+            "url": "https://api.github.com/repos/thephpleague/omnipay-paypal/zipball/942d616e87578330a4f48feab56430527889c07e",
+            "reference": "942d616e87578330a4f48feab56430527889c07e",
             "shasum": ""
         },
         "require": {
@@ -1554,19 +1552,20 @@
         "require-dev": {
             "omnipay/tests": "~2.0"
         },
-        "time": "2016-09-14 02:11:55",
+        "time": "2016-10-11 09:33:49",
         "type": "library",
         "extra": {
             "branch-alias": {
                 "dev-master": "2.3.x-dev"
             }
         },
-        "installation-source": "source",
+        "installation-source": "dist",
         "autoload": {
             "psr-4": {
                 "Omnipay\\PayPal\\": "src/"
             }
         },
+        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "MIT"
         ],
@@ -1590,10 +1589,7 @@
             "payment",
             "paypal",
             "purchase"
-        ],
-        "support": {
-            "source": "https://github.com/pixelandtonic/omnipay-paypal/tree/error10486handler"
-        }
+        ]
     },
     {
         "name": "omnipay/pin",
@@ -1952,6 +1948,59 @@
         ]
     },
     {
+        "name": "php-units-of-measure/php-units-of-measure",
+        "version": "v2.1.0",
+        "version_normalized": "2.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/PhpUnitsOfMeasure/php-units-of-measure.git",
+            "reference": "25f476e9c50e11af8cf044d22ffc271c96aa5248"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/PhpUnitsOfMeasure/php-units-of-measure/zipball/25f476e9c50e11af8cf044d22ffc271c96aa5248",
+            "reference": "25f476e9c50e11af8cf044d22ffc271c96aa5248",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.0"
+        },
+        "replace": {
+            "triplepoint/php-units-of-measure": "*"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.8.*",
+            "squizlabs/php_codesniffer": "2.2.*"
+        },
+        "time": "2016-07-24 22:36:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "PhpUnitsOfMeasure\\": "source/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jonathan Hanson",
+                "email": "jonathan@jonathan-hanson.org",
+                "homepage": "http://www.jonathan-hanson.org/",
+                "role": "Developer"
+            }
+        ],
+        "description": "A PHP library for converting between standard units of measure.",
+        "homepage": "https://github.com/PhpUnitsOfMeasure/php-units-of-measure",
+        "keywords": [
+            "conversion",
+            "data",
+            "measurements"
+        ]
+    },
+    {
         "name": "ramsey/array_column",
         "version": "1.1.3",
         "version_normalized": "1.1.3.0",
@@ -2051,59 +2100,5 @@
         "keywords": [
             "utility"
         ]
-    },
-    {
-        "name": "triplepoint/php-units-of-measure",
-        "version": "v2.1.0",
-        "version_normalized": "2.1.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/PhpUnitsOfMeasure/php-units-of-measure.git",
-            "reference": "25f476e9c50e11af8cf044d22ffc271c96aa5248"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/PhpUnitsOfMeasure/php-units-of-measure/zipball/25f476e9c50e11af8cf044d22ffc271c96aa5248",
-            "reference": "25f476e9c50e11af8cf044d22ffc271c96aa5248",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.4.0"
-        },
-        "replace": {
-            "triplepoint/php-units-of-measure": "*"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "4.8.*",
-            "squizlabs/php_codesniffer": "2.2.*"
-        },
-        "time": "2016-07-24 22:36:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "PhpUnitsOfMeasure\\": "source/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jonathan Hanson",
-                "email": "jonathan@jonathan-hanson.org",
-                "homepage": "http://www.jonathan-hanson.org/",
-                "role": "Developer"
-            }
-        ],
-        "description": "A PHP library for converting between standard units of measure.",
-        "homepage": "https://github.com/PhpUnitsOfMeasure/php-units-of-measure",
-        "keywords": [
-            "conversion",
-            "data",
-            "measurements"
-        ],
-        "abandoned": "php-units-of-measure/php-units-of-measure"
     }
 ]

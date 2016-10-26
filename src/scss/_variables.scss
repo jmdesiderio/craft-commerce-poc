@@ -2,11 +2,15 @@
 $black: #000;
 $white: #fff;
 
-$red: #da5a47;
+$blue: #00416b;
+$orange: #ff9700;
 
 $transparent: rgba($white, 0);
 
+
 $background-color: $white;
+$primary: $blue;
+$secondary: $orange;
 
 
 // Text
@@ -46,4 +50,4 @@ $default-transition: $default-transition-duration $default-transition-timing;
 // Header
 $small-header-height: 2.5rem; // 40px
 $medium-header-height: 3.75rem; // 60px
-$big-header-height: 10rem; // 80px
+$big-header-height: 12rem; // 80px
